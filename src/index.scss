@@ -1,0 +1,448 @@
+:root {
+  --bg-purple: #6d67d0;
+  --color-green: #87ebcd;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+html {
+  min-height: 100vh;
+
+  @media only screen and (max-width: 1080px) {
+    min-height: none;
+  }
+}
+
+body {
+  min-height: 100vh;
+  background: url("./assets/background.png") center no-repeat;
+  background-size: cover;
+
+  @media only screen and (max-width: 1080px) {
+    min-height: none;
+    background-attachment: fixed;
+  }
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (max-width: 1080px) {
+    min-height: none;
+    display: block;
+    padding: 24px;
+  }
+
+  .content-center {
+    width: 100%;
+    max-width: 1080px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 24px;
+
+    @media only screen and (max-width: 1080px) {
+      max-width: none;
+      display: block;
+    }
+  }
+
+  .card-1 {
+    width: 480px;
+    background: url("./assets/card-1.png") center no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    @media only screen and (max-width: 1080px) {
+      width: 100%;
+      margin-bottom: 24px;
+    }
+
+    & > .header {
+      color: #c2bff4;
+      font-size: 14px;
+      font-weight: 700;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 5px;
+      text-align: right;
+      width: 100%;
+      padding: 20px;
+
+      .loading {
+        animation: spin 1s infinite linear;
+      }
+    }
+
+    & > .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+
+      @media only screen and (max-width: 1080px) {
+        margin-bottom: 24px;
+      }
+
+      .degrees {
+        font-weight: 700;
+        font-size: 88px;
+        color: white;
+        position: relative;
+
+        &::after {
+          content: "ºC";
+          font-size: 24px;
+          color: #dad8f7;
+          position: absolute;
+          top: 20px;
+          right: -28px;
+        }
+      }
+
+      & > .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        .max {
+          font-size: 20px;
+          font-weight: 700;
+          color: white;
+        }
+
+        .min {
+          font-size: 20px;
+          font-weight: 700;
+          color: #c2bff4;
+        }
+      }
+    }
+
+    & > .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+
+      @media only screen and (max-width: 1080px) {
+        display: block;
+      }
+
+      & > .item {
+        border-radius: 5px;
+        background-color: rgba(102, 96, 200, 0.6);
+        padding: 12px 16px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        flex-grow: 1;
+
+        @media only screen and (max-width: 1080px) {
+          margin-bottom: 8px;
+          justify-content: center;
+        }
+
+        & > .content {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          flex-direction: column;
+
+          & > .title {
+            font-weight: 400;
+            font-size: 12px;
+            color: #e7e6fb;
+          }
+
+          & > .text {
+            font-weight: 700;
+            font-size: 14px;
+            color: #e7e6fb;
+
+            strong {
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .content-right {
+    width: 578px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    @media only screen and (max-width: 1080px) {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  .card-2 {
+    width: 277px;
+    background-color: var(--bg-purple);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    color: white;
+
+    @media only screen and (max-width: 1080px) {
+      width: 100%;
+      margin-bottom: 24px;
+    }
+
+    .title {
+      color: white;
+      font-weight: 400;
+      font-size: 16px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .main-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      span.text {
+        color: var(--color-green);
+        font-weight: 700;
+        font-size: 18px;
+      }
+
+      span.number {
+        font-weight: 700;
+        font-size: 40px;
+      }
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+
+      .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        span.number {
+          color: var(--color-green);
+          font-weight: 700;
+          font-size: 14px;
+          font-weight: 700;
+        }
+
+        span.text {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .card-3 {
+    width: 277px;
+    background-color: var(--bg-purple);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+    color: white;
+    position: relative;
+
+    @media only screen and (max-width: 1080px) {
+      width: 100%;
+      margin-bottom: 24px;
+    }
+
+    .title {
+      color: white;
+      font-weight: 400;
+      font-size: 16px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .graph {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      &::after {
+        background-color: #f6c833;
+        content: "";
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        z-index: 1002;
+      }
+
+      &::before {
+        background: url("./assets/sun-graph-gradient.png") repeat-x center top;
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 0;
+        height: 100%;
+        width: 50%;
+        z-index: 1000;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: 231px;
+        z-index: 1001;
+      }
+
+      span {
+        font-size: 14px;
+        font-weight: 700;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+      font-size: 12px;
+    }
+  }
+
+  .card-4 {
+    width: 578px;
+    background-color: var(--bg-purple);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 32px;
+
+    @media only screen and (max-width: 1080px) {
+      width: 100%;
+      margin-bottom: 24px;
+    }
+
+    .days {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media only screen and (max-width: 1080px) {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      .day {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        gap: 12px;
+
+        @media only screen and (max-width: 1080px) {
+          width: 33.33%;
+          margin-bottom: 32px;
+          gap: 3px;
+        }
+
+        .text {
+          font-weight: 700;
+          font-size: 14px;
+          color: #dad8f7;
+          text-align: center;
+        }
+
+        .icon {
+          width: 100%;
+          max-width: 64px;
+
+          img {
+            display: block;
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        .degrees {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-weight: 700;
+          font-size: 16px;
+          gap: 5px;
+
+          .max {
+            color: white;
+          }
+
+          .min {
+            color: #c2bff4;
+          }
+        }
+      }
+    }
+  }
+}
