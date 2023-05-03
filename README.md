@@ -30,7 +30,11 @@ See: [https://leandroparice-boracodar10.netlify.app/](https://leandroparice-bora
 
 - Responsive ✔️
 - Get location ✔️
-- Get weather information
+- Get weather information ✔️
+- Card 1 with dynamic image
+- Card 3 with dynamic data
+- Card 4 with dynamic image
+- Icon
 
 ### About #boraCodar
 

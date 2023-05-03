@@ -1,13 +1,8 @@
+/* eslint-disable react/prop-types */
 import { DropletsIcon, MapPin, WindIcon, WebhookIcon, CloudyIcon } from "lucide-react";
+import wheather from "../../assets/weather-1.svg";
 
 const Card1 = ({ loading, location, weatherData }) => {
-  // {
-  //   temp_c: data.current.temp_c,
-  //   wind_kph: data.current.wind_kph,
-  //   humidity: data.current.humidity,
-  //   cloud: data.current.cloud,
-  // }
-
   if (loading) {
     return (
       <div className="card-1">
@@ -23,6 +18,7 @@ const Card1 = ({ loading, location, weatherData }) => {
 
   return (
     <div className="card-1">
+      <img src={wheather} className="main-image" />
       <div className="header">
         <MapPin size={18} color="#9D99E4" />
         <span>

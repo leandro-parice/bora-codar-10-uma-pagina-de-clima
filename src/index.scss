@@ -12,6 +12,18 @@
   }
 }
 
+@keyframes mainImage {
+  0% {
+    transform: translate(-30%, -40%);
+  }
+  50% {
+    transform: translate(-20%, -45%);
+  }
+  100% {
+    transform: translate(-30%, -40%);
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -74,16 +86,24 @@ body {
     background: url("./assets/card-1.png") center no-repeat;
     background-size: cover;
     border-radius: 10px;
-    overflow: hidden;
     padding: 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    position: relative;
 
     @media only screen and (max-width: 1080px) {
       width: 100%;
       margin-bottom: 24px;
+    }
+
+    & .main-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+      animation: mainImage 10s infinite linear;
     }
 
     & > .header {
