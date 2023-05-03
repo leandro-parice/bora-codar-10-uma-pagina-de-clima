@@ -1,59 +1,29 @@
-import wheather from "../../assets/weather-1.svg";
+/* eslint-disable no-undef */
+/* eslint-disable react/prop-types */
+import { WebhookIcon } from "lucide-react";
 
-const Card4 = () => {
+import Card4Day from "../Card4Day";
+
+const Card4 = ({ loading, weatherData }) => {
+  if (loading) {
+    return (
+      <div className="card-4">
+        <div className="center">
+          <div className="loading">
+            <WebhookIcon size={18} color="#9D99E4" />
+          </div>
+          <span>Carregando informações...</span>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="card-4">
       <div className="days">
-        <div className="day">
-          <div className="text">Amanhã</div>
-          <div className="icon">
-            <img src={wheather} />
-          </div>
-          <div className="degrees">
-            <div className="max">21º</div>
-            <div className="min">16º</div>
-          </div>
-        </div>
-        <div className="day">
-          <div className="text">Amanhã</div>
-          <div className="icon">
-            <img src={wheather} />
-          </div>
-          <div className="degrees">
-            <div className="max">21º</div>
-            <div className="min">16º</div>
-          </div>
-        </div>
-        <div className="day">
-          <div className="text">Amanhã</div>
-          <div className="icon">
-            <img src={wheather} />
-          </div>
-          <div className="degrees">
-            <div className="max">21º</div>
-            <div className="min">16º</div>
-          </div>
-        </div>
-        <div className="day">
-          <div className="text">Amanhã</div>
-          <div className="icon">
-            <img src={wheather} />
-          </div>
-          <div className="degrees">
-            <div className="max">21º</div>
-            <div className="min">16º</div>
-          </div>
-        </div>
-        <div className="day">
-          <div className="text">Amanhã</div>
-          <div className="icon">
-            <img src={wheather} />
-          </div>
-          <div className="degrees">
-            <div className="max">21º</div>
-            <div className="min">16º</div>
-          </div>
-        </div>
+        {weatherData.forecast.map((day) => (
+          <Card4Day key={day.date} day={day} />
+        ))}
       </div>
     </div>
   );

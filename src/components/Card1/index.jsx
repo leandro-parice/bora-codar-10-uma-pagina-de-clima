@@ -30,10 +30,10 @@ const Card1 = ({ loading, location, weatherData }) => {
         </span>
       </div>
       <div className="content">
-        <div className="degrees">{weatherData.temp_c}</div>
+        <div className="degrees">{weatherData.current.temp_c}</div>
         <div className="footer">
-          <div className="max">22º</div>
-          <div className="min">16º</div>
+          <div className="max">{weatherData.current.maxtemp_c}º</div>
+          <div className="min">{weatherData.current.mintemp_c}º</div>
         </div>
       </div>
       <div className="footer">
@@ -42,7 +42,7 @@ const Card1 = ({ loading, location, weatherData }) => {
           <div className="content">
             <span className="title">Vento</span>
             <span className="text">
-              <strong>{weatherData.wind_kph}</strong> km/h
+              <strong>{weatherData.current.wind_kph}</strong> km/h
             </span>
           </div>
         </div>
@@ -51,7 +51,7 @@ const Card1 = ({ loading, location, weatherData }) => {
           <div className="content">
             <span className="title">Umidade</span>
             <span className="text">
-              <strong>{weatherData.humidity}</strong> %
+              <strong>{weatherData.current.humidity}</strong> %
             </span>
           </div>
         </div>
@@ -60,7 +60,7 @@ const Card1 = ({ loading, location, weatherData }) => {
           <div className="content">
             <span className="title">Nuvens</span>
             <span className="text">
-              <strong>{weatherData.cloud}</strong> %
+              <strong>{weatherData.current.cloud}</strong> %
             </span>
           </div>
         </div>

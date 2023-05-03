@@ -6,7 +6,7 @@
 
 Project for ReactJS study purposes, where I take advantage of Rocketseat's #boraCodar 10 front-end challenge to create a weather web app.
 In this project, I made integrations with APIs to capture location and weather information.
-I used [weatherapi.com](https://weatherapi.com) and [opencagedata.com](https://opencagedata.com) apis.
+I used [weatherapi.com](https://www.weatherapi.com) and [opencagedata.com](https://opencagedata.com) apis.
 
 ### Online version
 

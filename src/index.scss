@@ -52,6 +52,9 @@ body {
     padding: 24px;
   }
 
+  .loading {
+    animation: spin 1s infinite linear;
+  }
   .content-center {
     width: 100%;
     max-width: 1080px;
@@ -94,10 +97,6 @@ body {
       text-align: right;
       width: 100%;
       padding: 20px;
-
-      .loading {
-        animation: spin 1s infinite linear;
-      }
     }
 
     & > .content {
@@ -230,6 +229,13 @@ body {
       margin-bottom: 24px;
     }
 
+    .center {
+      display: flex;
+      gap: 10px;
+      color: #c2bff4;
+      font-size: 14px;
+    }
+
     .title {
       color: white;
       font-weight: 400;
@@ -251,11 +257,7 @@ body {
         color: var(--color-green);
         font-weight: 700;
         font-size: 18px;
-      }
-
-      span.number {
-        font-weight: 700;
-        font-size: 40px;
+        text-align: center;
       }
     }
 
@@ -279,7 +281,7 @@ body {
         }
 
         span.text {
-          font-size: 12px;
+          font-size: 10px;
         }
       }
     }
@@ -302,6 +304,13 @@ body {
     @media only screen and (max-width: 1080px) {
       width: 100%;
       margin-bottom: 24px;
+    }
+
+    .center {
+      display: flex;
+      gap: 10px;
+      color: #c2bff4;
+      font-size: 14px;
     }
 
     .title {
@@ -382,6 +391,13 @@ body {
     @media only screen and (max-width: 1080px) {
       width: 100%;
       margin-bottom: 24px;
+    }
+
+    .center {
+      display: flex;
+      gap: 10px;
+      color: #c2bff4;
+      font-size: 14px;
     }
 
     .days {
