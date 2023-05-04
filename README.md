@@ -12,6 +12,8 @@ I used [weatherapi.com](https://www.weatherapi.com) and [opencagedata.com](https
 
 See: [https://leandroparice-boracodar10.netlify.app/](https://leandroparice-boracodar10.netlify.app)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f1fae81b-52a6-4b62-82a7-f9df1831a912/deploy-status)](https://app.netlify.com/sites/leandroparice-boracodar10/deploys)
+
 ### Technologies / Programming languages
 
 - HTML
