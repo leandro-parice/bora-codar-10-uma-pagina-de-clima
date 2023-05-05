@@ -1,6 +1,6 @@
+/* eslint-disable react/prop-types */
 import { SunIcon, WebhookIcon } from "lucide-react";
 import sunGraph from "../../assets/sun-graph.png";
-import sun from "../../assets/sun.png";
 import sunGraphGradient from "../../assets/sun-graph-gradient.png";
 import { parse, differenceInSeconds, startOfDay } from "date-fns";
 import { useEffect, useState } from "react";
@@ -18,13 +18,10 @@ const Card3 = ({ loading, weatherData }) => {
       const todaySunrise = parse(weatherData.current.sunrise, "hh:mm a", new Date());
       const todaySunset = parse(weatherData.current.sunset, "hh:mm a", new Date());
       const todayNow = new Date();
-      // const todayNow = parse("01:00 PM", "hh:mm a", new Date());
 
       const difference1 = Math.abs(differenceInSeconds(todaySunrise, todayStart));
       const difference2 = Math.abs(differenceInSeconds(todaySunset, todayStart));
       const difference3 = Math.abs(differenceInSeconds(todayNow, todayStart));
-
-      console.log(difference1, difference2, difference3);
 
       let newPct = 0;
 
@@ -74,13 +71,6 @@ const Card3 = ({ loading, weatherData }) => {
         <div className="sun">
           <span className="sun-item" style={{ "--left-sun": widthGradient, "--buttom-sun": heightSun }}></span>
         </div>
-        <img
-          src={sun}
-          className="sun"
-          style={{
-            transform: `rotate(${rotateSun})`,
-          }}
-        />
       </div>
       <div className="footer">
         <span>{weatherData.current.sunrise}</span>

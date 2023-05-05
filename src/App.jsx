@@ -12,7 +12,7 @@ const App = () => {
 
   const fetchWeatherData = async () => {
     try {
-      const apiKey = "820c4e7e336043d8b4a221342230205";
+      const apiKey = import.meta.env.VITE_WEATHERAPI_KEY;
       const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location.city}&days=3&aqi=yes&alerts=no`;
 
       const response = await fetch(apiUrl);
@@ -45,6 +45,7 @@ const App = () => {
           date: element.date,
           maxtemp_c: element.day.maxtemp_c,
           mintemp_c: element.day.mintemp_c,
+          condition: element.day.condition,
         });
       });
 
@@ -65,16 +66,12 @@ const App = () => {
           async (position) => {
             const latitude = position.coords.latitude;
             const longitude = position.coords.longitude;
-
-            const apiKey = "f675a503852644fb9b8012d8ee21daf9";
+            const apiKey = import.meta.env.VITE_OPENCAGEDATA_KEY;
             const apiUrl = `https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=${apiKey}`;
-
             const response = await fetch(apiUrl);
             const data = await response.json();
-
             const city = data.results[0].components.city;
             const region = data.results[0].components.state_code;
-
             setLocation({ latitude, longitude, city, region });
           },
           (error) => {
@@ -85,7 +82,6 @@ const App = () => {
         console.log("Geolocalização não suportada");
       }
     };
-
     getLocation();
   }, []);
 
