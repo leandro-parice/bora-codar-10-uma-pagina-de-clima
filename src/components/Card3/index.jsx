@@ -36,8 +36,6 @@ const Card3 = ({ loading, weatherData }) => {
         }
       }
 
-      newPct = 100;
-
       const newWidthGradient = (newPct * 210) / 100;
       setWidthGradient(`${newWidthGradient}px`);
 
