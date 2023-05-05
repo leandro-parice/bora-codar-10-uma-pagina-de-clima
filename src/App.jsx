@@ -48,8 +48,6 @@ const App = () => {
         });
       });
 
-      console.log(forecast);
-
       setWeatherData({
         current,
         forecast,
@@ -109,7 +107,7 @@ const App = () => {
         <Card1 loading={loading} location={location} weatherData={weatherData} />
         <div className="content-right">
           <Card2 loading={loading} weatherData={weatherData} />
-          <Card3 />
+          <Card3 loading={loading} weatherData={weatherData} />
           <Card4 loading={loading} weatherData={weatherData} />
         </div>
       </div>

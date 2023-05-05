@@ -8,6 +8,8 @@ Project for ReactJS study purposes, where I take advantage of Rocketseat's #bora
 In this project, I made integrations with APIs to capture location and weather information.
 I used [weatherapi.com](https://www.weatherapi.com) and [opencagedata.com](https://opencagedata.com) apis.
 
+One of the great challenges of this project was to find the mathematical formula to position the sun on the graph and for that I had the help of a dear and great friend, professor of mathematics, André Penedo. 💚👊
+
 ### Online version
 
 See: [https://leandroparice-boracodar10.netlify.app/](https://leandroparice-boracodar10.netlify.app)

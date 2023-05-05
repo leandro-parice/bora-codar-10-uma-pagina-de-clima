@@ -350,31 +350,27 @@ body {
       align-items: center;
       position: relative;
 
-      &::after {
-        background-color: #f6c833;
-        content: "";
-        width: 12px;
-        height: 12px;
+      .sun {
+        width: 210px;
+        height: 104px;
         position: absolute;
-        top: 8px;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border-radius: 50%;
-        z-index: 1002;
+        bottom: 11px;
+        left: 9px;
+
+        .sun-item {
+          background-color: #f6c833;
+          width: 12px;
+          height: 12px;
+          position: absolute;
+          left: calc(var(--left-sun) - 6px);
+          bottom: calc(var(--buttom-sun) - 6px);
+          border-radius: 50%;
+          z-index: 1002;
+          display: block;
+        }
       }
 
-      &::before {
-        background: url("./assets/sun-graph-gradient.png") repeat-x center top;
-        content: "";
-        position: absolute;
-        top: 8px;
-        left: 0;
-        height: 100%;
-        width: 50%;
-        z-index: 1000;
-      }
-
-      img {
+      img.sun-graph {
         display: block;
         width: 100%;
         height: auto;
@@ -382,7 +378,29 @@ body {
         z-index: 1001;
       }
 
-      span {
+      img.sun-graph-gradient {
+        position: absolute;
+        top: 8px;
+        left: 9px;
+        height: 100%;
+        width: var(--width-sun-gradient);
+        z-index: 1000;
+      }
+
+      img.sun {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: 231px;
+        z-index: 1002;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: rotate(--rotate-sun);
+        display: none;
+      }
+
+      span.text {
         font-size: 14px;
         font-weight: 700;
         position: absolute;
