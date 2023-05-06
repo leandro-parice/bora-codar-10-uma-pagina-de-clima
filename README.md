@@ -16,6 +16,41 @@ See: [https://leandroparice-boracodar10.netlify.app/](https://leandroparice-bora
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f1fae81b-52a6-4b62-82a7-f9df1831a912/deploy-status)](https://app.netlify.com/sites/leandroparice-boracodar10/deploys)
 
+### Instalation
+
+- Install the dependencies with NPM.
+
+```
+npm install
+```
+
+- Create an account on [weatherapi.com](https://www.weatherapi.com) and [opencagedata.com](https://opencagedata.com) services to get your API keys
+
+- Create a .env file in root folder and put this variebles with your API KEYS.
+
+```
+VITE_WEATHERAPI_KEY=YOUR_API_KEY
+VITE_OPENCAGEDATA_KEY=YOUR_API_KEY
+```
+
+- To start the project on your machine using NPM.
+
+```
+npm run dev
+```
+
+- To build the project using NPM.
+
+```
+npm run build
+```
+
+- Build command in Netlify.
+
+```
+echo -e "VITE_WEATHERAPI_KEY=YOUR_API_KEY\nVITE_OPENCAGEDATA_KEY=YOUR_API_KEY" > .env && npm run build
+```
+
 ### Technologies / Programming languages
 
 - HTML
