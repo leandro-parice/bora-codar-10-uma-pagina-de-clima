@@ -67,6 +67,7 @@ body {
   .loading {
     animation: spin 1s infinite linear;
   }
+
   .content-center {
     width: 100%;
     max-width: 1080px;
@@ -117,6 +118,10 @@ body {
       text-align: right;
       width: 100%;
       padding: 20px;
+
+      &.header-center {
+        justify-content: center;
+      }
     }
 
     & > .content {
@@ -435,6 +440,8 @@ body {
       gap: 10px;
       color: #c2bff4;
       font-size: 14px;
+      justify-content: center;
+      align-content: center;
     }
 
     .days {

@@ -6,7 +6,7 @@ const Card1 = ({ loading, location, weatherData }) => {
   if (loading) {
     return (
       <div className="card-1">
-        <div className="header">
+        <div className="header header-center">
           <div className="loading">
             <WebhookIcon size={18} color="#9D99E4" />
           </div>
